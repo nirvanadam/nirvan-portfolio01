@@ -157,9 +157,26 @@ function Home() {
 
         {/* Menu */}
         <div className={`${displayMenu ? "" : "-translate-y-36"} lg:hidden absolute left-0 right-0 -z-10 bg-white flex flex-col items-center gap-5 py-3 transition-all duration-500`}>
-          <button className="font-semibold">Home</button>
-          <button className="font-semibold">About</button>
-          <button className="font-semibold">Contact</button>
+          <Link
+            to={"/"}
+            className="relative before:contents-[''] before:absolute before:bottom-0 before:w-0 hover:before:w-full before:h-[1px] before:bg-black before:transition-all before:duration-300 hover:text-secondary transition-all duration-300 font-semibold"
+          >
+            Home
+          </Link>
+
+          <Link
+            to={"/about"}
+            className="relative before:contents-[''] before:absolute before:bottom-0 before:w-0 hover:before:w-full before:h-[1px] before:bg-black before:transition-all before:duration-300 hover:text-secondary transition-all duration-300 font-semibold"
+          >
+            About
+          </Link>
+
+          <Link
+            to="/about/#contact"
+            className="relative before:contents-[''] before:absolute before:bottom-0 before:w-0 hover:before:w-full before:h-[1px] before:bg-black before:transition-all before:duration-300 hover:text-secondary transition-all duration-300 font-semibold"
+          >
+            Contact
+          </Link>
         </div>
         {/* Menu End */}
       </div>
